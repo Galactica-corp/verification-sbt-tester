@@ -1,4 +1,6 @@
 {
+  "name": "@galactica-net/verification-sbt-tester",
+  "license": "MIT",
   "dependencies": {},
   "devDependencies": {
     "@galactica-net/zk-certificates": "^0.11.2",
