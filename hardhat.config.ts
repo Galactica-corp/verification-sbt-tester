@@ -2,6 +2,8 @@ import { HardhatUserConfig } from "hardhat/config";
 import "@nomicfoundation/hardhat-toolbox";
 import { Wallet } from "ethers";
 
+import "./tasks/issueTestSBT";
+
 const config: HardhatUserConfig = {
   solidity: "0.8.28",
   networks: {

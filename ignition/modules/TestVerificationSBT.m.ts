@@ -2,6 +2,7 @@
 // Learn more about it at https://hardhat.org/ignition
 
 import { buildModule } from "@nomicfoundation/hardhat-ignition/modules";
+import { ethers } from "ethers";
 
 const TestVerificationSBTModule = buildModule("TestVerificationSBTModule", (m) => {
   const uri = m.getParameter("metadataUri", "https://example.com");
@@ -11,8 +12,15 @@ const TestVerificationSBTModule = buildModule("TestVerificationSBTModule", (m) =
 
 
   const testSBT = m.contract("VerificationSBT", [uri, name, symbol, issuer]);
+  const verifierWrapper = m.contract("AgeCitizenshipKYC", [
+    issuer,
+    testSBT, // just some random contract that has a codehash to look like a versioned ZK verifier
+    ethers.ZeroAddress,
+    [], [],
+    0
+  ]);
 
-  return { testSBT };
+  return { testSBT, verifierWrapper };
 });
 
 export default TestVerificationSBTModule;

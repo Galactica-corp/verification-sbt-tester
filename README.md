@@ -12,9 +12,8 @@ yarn install
 yarn hardhat ignition deploy ./ignition/modules/TestVerificationSBT.m.ts --network reticulum
 ```
 
-## Issue test SBT
+## Issue a test SBT
 
 ```shell
-yarn hardhat ignition deploy ./ignition/modules/IssueTestSBT.m.ts --network reticulum
+yarn hardhat issueTestSBT --receiver 0x018448224e6bf248da52e4693886955e023e0737 --network reticulum
 ```
-
