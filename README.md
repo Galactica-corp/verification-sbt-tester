@@ -6,6 +6,10 @@
 yarn install
 ```
 
+Set the environment variable `GalaTestnetDeployerPrivateKey` to the private key of the account that you want to use for testing.
+
+Get some testnet funds from the faucet: https://faucet-reticulum.galactica.com/
+
 ## Deploying
 
 ```shell
